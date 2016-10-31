@@ -15,12 +15,12 @@
   unarchive: >-
     src=/tmp/{{dart_sdk_zip}}
     dest={{dart_parent_install_dir}}/{{dart_sdk_name}}
-    creates={{dart_parent_install_dir}}/{{dart_sdk_name}}/dart-sdk
+    creates={{dart_parent_install_dir}}/{{dart_sdk_name}}/{{dart_sdk_subdir}}
 
 - name: link
   file: >-
-    src={{dart_parent_install_dir}}/{{dart_sdk_name}}/dart-sdk
-    dest={{dart_parent_install_dir}}/dart-sdk
+    src={{dart_parent_install_dir}}/{{dart_sdk_name}}/{{dart_sdk_subdir}}
+    dest={{dart_parent_install_dir}}/{{dart_sdk_subdir}}
     state=link
 
 - name: add to path
