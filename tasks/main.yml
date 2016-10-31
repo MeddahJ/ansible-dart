@@ -16,6 +16,8 @@
     src=/tmp/{{dart_sdk_zip}}
     dest={{dart_parent_install_dir}}/{{dart_sdk_name}}
     creates={{dart_parent_install_dir}}/{{dart_sdk_name}}/{{dart_sdk_subdir}}
+    copy=no
+    mode=0755
 
 - name: link
   file: >-
